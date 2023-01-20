@@ -7,19 +7,19 @@ const printFlyOverTimes = function(flyOverTimes) {
     date.setUTCSeconds(pass.risetime);
     // Extracting duration from object.
     const duration = pass.duration;
-    console.log(`Next ISS pass will be on ${date} for approx. ${duration} seconds! Woohoo!`)
+    console.log(`Next ISS pass will be on ${date} for approx. ${duration} seconds! Woohoo!`);
   }
-}
+};
 
-nextISSTimesForMyLocation((error, flyOverTimes) => {
-  if (error) {
-    console.log('It didnt work!', error)
-  }
-  // Use helper function to print the fly-over times as a coherent sentence.
-  printFlyOverTimes(flyOverTimes)
-})
+// nextISSTimesForMyLocation((error, flyOverTimes) => {
+//   if (error) {
+//     console.log('It didnt work!', error);
+//   }
+//   // Use helper function to print the fly-over times as a coherent sentence.
+//   printFlyOverTimes(flyOverTimes);
+// });
 
-
+module.exports = { printFlyOverTimes };
 // fetchMyIP((error, ip) => {
 //   if (error) {
 //     console.log('It didnt work!', error);
